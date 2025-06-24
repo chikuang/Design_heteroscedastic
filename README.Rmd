@@ -1,17 +1,17 @@
 ---
 title: "Design - Heteroscedastic"
-date: today
-date-format: long
-format: 
-  gfm:
-    preview-mode: raw
-    html-math-method: 
-      method: webtex
-      url: https://latex.codecogs.com/png.image?%5Cbg_black&space;
+author: |
+  | *Chi-Kuang Yeh*
+  | McGill University and University of Waterloo
+date: "*`r format(Sys.time(), '%B %d, %Y')`*"
+output: github_document
 ---
 
-**Chi-Kuang Yeh**  
-*McGill University and University of Waterloo*  
+\newcommand{\cov}{\mathbb{c}cov}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ## Description
 
@@ -20,7 +20,7 @@ This is the repo to compute regression model with heteroscedastic error.
 ## The Model
 
 $$
-  y(x)=f^\top(x) \beta + e/\sqrt{\lambda(x)} = \sum_{i=1}^p f_i(x) \beta_i + e / \sqrt{\lambda(x) } 
+  y(x)=f^\top(x) \beta + \frac{e}{\sqrt{\lambda(x)}} = \sum_{i=1}^p f_i(x) \beta_i + \frac{e}{\sqrt{\lambda(x) }} 
 $$
 
 ## Contact or Suggestions
