@@ -7,7 +7,9 @@ date: "*`r format(Sys.time(), '%B %d, %Y')`*"
 output: github_document
 ---
 
-\newcommand{\cov}{\mathbb{c}cov}
+\newcommand{\cov}{\mathbb{c}ov}
+\newcommand{\N}{\mathcal N}
+\newcommand{\X}{\mathcal X}
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -20,8 +22,11 @@ This is the repo to compute regression model with heteroscedastic error.
 ## The Model
 
 $$
-  y(x)=f^\top(x) \beta + \frac{e}{\sqrt{\lambda(x)}} = \sum_{i=1}^p f_i(x) \beta_i + \frac{e}{\sqrt{\lambda(x) }} 
+  y(x)=g^\top(x) \beta + \frac{e}{\sqrt{\lambda(x)}} = \sum_{i=1}^p g_i(x) \beta_i + \frac{e}{\sqrt{\lambda(x) }},\quad e\sim \N(0,\sigma).
 $$
+### Polynomial model
+
+Here \(g(x) = (1,x,\dots,x^d\)\), \(\beta^\top=(\beta_0,\dots,\beta_d)\) and $e(x)$ is a random error having mean 0 and constant variance $\sigma^2$. The function $\lambda(x)$ is a known positive real-valued continuous function on $\X$ and inversely proportional to the variance of the fitted response at $x$.
 
 ## Contact or Suggestions
 
@@ -29,13 +34,15 @@ If you encounter any issues, please contact me [Chi-Kuang Yeh](https://chikuang.
 
 ## References
 
-1. Chen, R.-B., Wong, W.K., & Li, K.-Y. (2008) [Optimal minimax designs over a prespecified interval in a heteroscedastic polynomial model](https://www.sciencedirect.com/science/article/pii/S0167715208000588?casa_token=CSYGIaqcSycAAAAA:xH69BebDGq6GYitdc3m28CCcE8AFU8a0qL8DbHifzMxgyAwuP-7MBltelbBokw9QiVl8wz9bsjQ). *Statistics & Probability Letters* 78, 1914--1921.
+1. Chen, R.B., Chang, S.P., Wang, W., Tung, H.C. & Wong, W.K. (2015). [Minimax optimal designs via particle swarm optimization methods](https://link.springer.com/article/10.1007/s11222-014-9466-0). *Statistics and Computing*, 25, 975--988.
 
-2. Wong, W.K. (1994). [G-optimal designs for multi-factor experiments with heteroscedastic errors](https://www.sciencedirect.com/science/article/pii/0378375894901465). *Journal of Statistical Planning and Inference*, 40, 127--133.
+2. Chen, R.-B., Wong, W.K., & Li, K.-Y. (2008) [Optimal minimax designs over a prespecified interval in a heteroscedastic polynomial model](https://www.sciencedirect.com/science/article/pii/S0167715208000588?casa_token=CSYGIaqcSycAAAAA:xH69BebDGq6GYitdc3m28CCcE8AFU8a0qL8DbHifzMxgyAwuP-7MBltelbBokw9QiVl8wz9bsjQ). *Statistics & Probability Letters* 78, 1914--1921.
 
-3. Wong, W.K. & Cook, R.D. (1993). [Heteroscedastic G‐optimal designs](https://www.jstor.org/stable/2345999). *Journal of the Royal Statistical Society, Series B*, 55, 871--880.
+3. Wong, W.K. (1994). [G-optimal designs for multi-factor experiments with heteroscedastic errors](https://www.sciencedirect.com/science/article/pii/0378375894901465). *Journal of Statistical Planning and Inference*, 40, 127--133.
+
+4. Wong, W.K. & Cook, R.D. (1993). [Heteroscedastic G‐optimal designs](https://www.jstor.org/stable/2345999). *Journal of the Royal Statistical Society, Series B*, 55, 871--880.
 
 ## TODO
 
 + [ ] \(G\)-optimality
-+ [ ] \(E\)-optimality]
++ [ ] \(E\)-optimality
