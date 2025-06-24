@@ -19,9 +19,9 @@ This is the repo to compute regression model with heteroscedastic error.
 
 ## The Model
 
-\[
-y(x)=f^{\mathrm{T}}(x) \beta+e / \sqrt{ } \lambda(x)=\sum_{i=1}^p f_i(x) \beta_i+e / \sqrt{ } \lambda(x)
-\]
+$$
+  y(x)=f^\top(x) \beta + e/\sqrt{\lambda(x)} = \sum_{i=1}^p f_i(x) \beta_i + e / \sqrt{\lambda(x) } 
+$$
 
 ## Contact or Suggestions
 
