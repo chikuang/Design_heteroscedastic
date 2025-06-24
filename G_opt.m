@@ -4,7 +4,7 @@ g = @(x) [1; x; x.^2];
 lambda = @(x) 2*x + 5;  % Heteroscedastic
 N = 501;
 Nz = 201;
-z_vals = linspace(1,1.2 , Nz);
+z_vals = linspace(-1,1 , Nz);
 x_vals = linspace(-1, 1, N)';
 p = 3;
 
