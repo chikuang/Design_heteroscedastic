@@ -12,7 +12,8 @@ This is the repo to compute regression model with heteroscedastic error.
 ## The Model
 
 $$  y(x)=g^\top(x) \beta + \frac{e}{\sqrt{\lambda(x)}} = \sum_{i=1}^p g_i(x) \beta_i + \frac{e}{\sqrt{\lambda(x) }},\quad e\sim \mathcal N(0,\sigma).$$
-\### Polynomial model
+
+### Polynomial model
 
 Here $g(x) = (1,x,\dots,x^d$), $\beta^\top=(\beta_0,\dots,\beta_d)$ and
 $e(x)$ is a random error having mean 0 and constant variance $\sigma^2$.
