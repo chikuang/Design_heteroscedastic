@@ -15,7 +15,7 @@ $$  y(x)=g^\top(x) \beta + \frac{e}{\sqrt{\lambda(x)}} = \sum_{i=1}^p g_i(x) \be
 
 ### Polynomial model
 
-Here $g(x) = (1,x,\dots,x^d$), $\beta^\top=(\beta_0,\dots,\beta_d)$ and
+Here $g(x) = (1,x,\dots,x^d$), $\beta=(\beta_0,\dots,\beta_d)$ and
 $e(x)$ is a random error having mean 0 and constant variance $\sigma^2$.
 The function $\lambda(x)$ is a known positive real-valued continuous
 function on $\mathcal X$ and inversely proportional to the variance of
